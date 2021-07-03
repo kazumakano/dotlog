@@ -1,4 +1,4 @@
-baseurl = "https://zhaohuabing.com"
+baseurl = "https://kazumakano.github.io/blog"
 title = "Huabing Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
@@ -29,7 +29,7 @@ home = ["HTML", "RSS", "Algolia"]
   leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = true
+  algolia_search = false
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""

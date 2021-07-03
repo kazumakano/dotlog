@@ -1,0 +1,9 @@
+# for MacOS
+.DS_Store
+content/.DS_Store
+content/post/.DS_Store
+content/search/.DS_Store
+content/top/.DS_Store
+static/.DS_Store
+static/img/.DS_Store
+themes/.DS_Store

@@ -5,7 +5,7 @@ subtitle:    ""
 description: "無料でサイトを公開する"
 author:      "Kazuma Kano"
 date:        2021-07-10
-image:       "img/home-flower.jpg"
+image:       true
 categories:  [ web ]
 tags:
     - github
@@ -40,8 +40,7 @@ Repositories > New を選択すると以下のような画面が表示されま�
 ここでリポジトリの初期設定を行います。
 リポジトリ名はサイトのURLの一部になります。
 これらの設定は後からでも変更できます。
-![Create a new repository](../../../../img/post-20210710-01.png)
-<!-- ![Create a new repository](../../img/post-20210710-01.png) -->
+![Create a new repository](../../img/post-20210710-01.png)
 
 # Push Source Code
 続いて、サイトのソースコードをプッシュします。
@@ -75,7 +74,6 @@ git push -u origin main
 
 Repositories > repositoryname > Settings > Pages を選択すると以下のような画面が表示されます。
 サイトのベースとなるブランチとディレクトリを設定し、Save を選択します。
-![GitHub Pages](../../../../img/post-20210710-02.png)
-<!-- ![GitHub Pages](../../img/post-20210710-02.png) -->
+![GitHub Pages](../../img/post-20210710-02.png)
 
 数分後、`https://username.github.io/repositoryname/`にアクセスするとサイトが配信されていることが確認できます。

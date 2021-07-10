@@ -16,5 +16,14 @@
       <description>GitHub Pagesを利用してユーザサイトを公開する方法についてまとめます。 GitHub Pages GitHub PagesはGitHubが提供している静的なサイトホスティングサー</description>
     </item>
     
+    <item>
+      <title>GitHubで403エラーが出た時の対処法</title>
+      <link>https://kazumakano.github.io/dotlog/post/2021-07-04-keychain/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/2021-07-04-keychain/</guid>
+      <description>Mac PCでGitHubのリモートリポジトリにプッシュしようとしたところ以下ようなエラーが出ました。 過去の別のアカウントへのログイン情報を参照し</description>
+    </item>
+    
   </channel>
 </rss>

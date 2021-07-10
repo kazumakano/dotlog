@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="GitHubで403エラーが出た時の対処法" />
+    <meta property="og:title" content="GitHubで403エラーが出た時の対処法" />
+    <meta property="twitter:title" content="GitHubで403エラーが出た時の対処法" />
     
 
     
-    <meta name="description" content="当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。">
-    <meta property="og:description" content="当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。" />
-    <meta property="twitter:description" content="当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。" />
+    <meta name="description" content="キーチェーンアクセスからログイン情報を削除">
+    <meta property="og:description" content="キーチェーンアクセスからログイン情報を削除" />
+    <meta property="twitter:description" content="キーチェーンアクセスからログイン情報を削除" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>Tags-Blog for Study Information Engineering</title>
+    <title>GitHubで403エラーが出た時の対処法-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/tags/">
+    <link rel="canonical" href="/dotlog/dotlog/post/2021-07-04-keychain/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -142,14 +142,41 @@
 
 
 
-<header class="intro-header" style="background-image: url('/dotlog/img/home-waiotapu-blue.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/dotlog/true')
+    }
+</style>
+<header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>.LOG </h1>
-                    
-		    <span class="subheading">Blog for Study Information Engineering</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/dotlog/tags/github" title="github">
+                            github
+                        </a>
+                        
+                        <a class="tag" href="/dotlog/tags/macos" title="macos">
+                            macos
+                        </a>
+                        
+                    </div>
+                    <h1>GitHubで403エラーが出た時の対処法</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                            Kazuma Kano
+                         
+                        on 
+                        Saturday, July 10, 2021
+                        
+                        
+                        
+                    </span>
                 </div>
             </div>
         </div>
@@ -162,13 +189,57 @@
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-11 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents"></nav>
+                
+                <p>Mac PCでGitHubのリモートリポジトリにプッシュしようとしたところ以下ようなエラーが出ました。
+過去の別のアカウントへのログイン情報を参照してしまっているようです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">remote: Permission to username/repositoryname.git denied to anotherusername.
+fatal: unable to access <span style="color:#f1fa8c">&#39;https://github.com/username/repositoryname.git/&#39;</span>: The requested URL returned error: <span style="color:#bd93f9">403</span>
+</code></pre></div><p>ローカルとグローバルそれぞれの設定ファイルを確認します。
+誤った<code>user.name</code>と<code>user.email</code>が設定されている場合はそれを修正します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">vim .git/config
+vim /.gitconfig
+</code></pre></div><p>Spotlight &gt; keychain access.app でキーチェーンアクセスを開きます。
+ログイン を選択すると、保存されているログイン情報の一覧を確認できます。
+GitHubのログイン情報は以下のようなアイコンが目印です。
+誤ったログイン情報が登録されている場合は、右クリック &gt; &ldquo;github.com&quot;を削除 からそれを削除します。
+
+  <img src="../../img/post-20210710-03.png" alt="icon">
+
+</p>
+<p>コマンドラインからでも編集できるようです。
+詳しくは<a href="https://docs.github.com/ja/github/getting-started-with-github/getting-started-with-git/updating-credentials-from-the-macos-keychain">公式のドキュメント</a>を参照してください。</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/dotlog/post/readme/" data-toggle="tooltip" data-placement="top" title="README">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/dotlog/post/2021-07-04-begin-github-pages/" data-toggle="tooltip" data-placement="top" title="GitHub Pagesを始める">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
                 
 <div id="disqus-comment"></div>
 
@@ -177,7 +248,7 @@
             </div>
             
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-11 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
@@ -191,13 +262,13 @@
                         
                         
                         <a href="/dotlog/tags/github" title="github">
-                        github
+                            github
                         </a>
                         
                         
                         
                         <a href="/dotlog/tags/macos" title="macos">
-                        macos
+                            macos
                         </a>
                         
                         

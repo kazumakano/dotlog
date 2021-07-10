@@ -69,7 +69,7 @@ git remote add origin https://github.com/username/repositoryname.git
 git push -u origin main
 ```
 
-# Publish
+# Publish Site
 最後に、リポジトリのGitHub Pagesサービスを有効化してサイトを公開します。
 
 Repositories > repositoryname > Settings > Pages を選択すると以下のような画面が表示されます。

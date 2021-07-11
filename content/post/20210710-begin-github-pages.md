@@ -42,7 +42,7 @@ Repositories > New を選択すると以下のような画面が表示されま�
 これらの設定は後からでも変更できます。
 ![Create a new repository](../../img/post-20210710-01.png)
 
-# Push Source Code
+# Push
 続いて、サイトのソースコードをプッシュします。
 
 ソースコードを管理しているディレクトリに移動します。
@@ -69,7 +69,7 @@ git remote add origin https://github.com/username/repositoryname.git
 git push -u origin main
 ```
 
-# Publish Site
+# Publish
 最後に、リポジトリのGitHub Pagesのサービスを有効化してサイトを公開します。
 
 Repositories > repositoryname > Settings > Pages を選択すると以下のような画面が表示されます。

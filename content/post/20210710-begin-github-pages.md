@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:       "GitHub Pagesを始める"
+title:       "GitHub Pages"
 subtitle:    ""
 description: "無料でサイトを公開する"
 author:      "Kazuma Kano"

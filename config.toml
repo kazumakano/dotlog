@@ -85,9 +85,9 @@ home = ["HTML", "RSS", "Algolia"]
   title = "Linda的博客"
   href =  "https://zhaozhihan.com"
 
-  #[[params.bookmark_link]]
-  #title =  "Martin Fowler"
-  #href =  "https://martinfowler.com"
+  [[params.bookmark_link]]
+  title = "docker"
+  href = "https://knowledge.sakura.ad.jp/13265/"
   
   #[[params.addtional_menus]]
   #title =  "BOOKS"

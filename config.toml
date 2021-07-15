@@ -86,8 +86,8 @@ home = ["HTML", "RSS", "Algolia"]
   href =  "https://zhaozhihan.com"
 
   [[params.bookmark_link]]
-  title = "docker"
-  href = "https://knowledge.sakura.ad.jp/13265/"
+  title = "chainer tutorial"
+  href = "https://tutorials.chainer.org/ja/tutorial.html"
   
   #[[params.addtional_menus]]
   #title =  "BOOKS"

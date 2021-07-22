@@ -2,7 +2,7 @@
 layout:      post
 title:       "GitHub Pages"
 subtitle:    ""
-description: "無料でサイトを公開する"
+description: "無料でサイトを公開"
 author:      "Kazuma Kano"
 date:        2021-07-10
 image:       true

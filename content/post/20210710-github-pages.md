@@ -1,15 +1,13 @@
 ---
-layout:      post
 title:       "GitHub Pages"
 subtitle:    ""
 description: "無料でサイトを公開"
-author:      "Kazuma Kano"
 date:        2021-07-10
+author:      "Kazuma Kano"
 image:       true
-categories:  [ web ]
-tags:
-    - github
-published: true
+tags:        [github]
+categories:  [web]
+published:   true
 ---
 
 GitHub Pagesを利用してユーザサイトを公開する方法についてまとめます。

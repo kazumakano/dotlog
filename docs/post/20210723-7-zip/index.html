@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="GitHubで403エラーが出た時の対処法" />
-    <meta property="og:title" content="GitHubで403エラーが出た時の対処法" />
-    <meta property="twitter:title" content="GitHubで403エラーが出た時の対処法" />
+    <meta name="title" content="7-Zip" />
+    <meta property="og:title" content="7-Zip" />
+    <meta property="twitter:title" content="7-Zip" />
     
 
     
-    <meta name="description" content="キーチェーンアクセスからログイン情報を削除">
-    <meta property="og:description" content="キーチェーンアクセスからログイン情報を削除" />
-    <meta property="twitter:description" content="キーチェーンアクセスからログイン情報を削除" />
+    <meta name="description" content="zipファイルにパスワードを設定">
+    <meta property="og:description" content="zipファイルにパスワードを設定" />
+    <meta property="twitter:description" content="zipファイルにパスワードを設定" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>GitHubで403エラーが出た時の対処法-Blog for Study Information Engineering</title>
+    <title>7-Zip-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/post/2021-07-04-keychain/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20210723-7-zip/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -94,6 +94,14 @@
                         <a href="/dotlog/">Home</a>
                     </li>
                     
+                        
+                        <li>
+                            <a href="/dotlog/categories/trouble">trouble</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/dotlog/categories/util">util</a>
+                        </li>
                         
                         <li>
                             <a href="/dotlog/categories/web">web</a>
@@ -155,16 +163,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/dotlog/tags/github" title="github">
-                            github
-                        </a>
-                        
-                        <a class="tag" href="/dotlog/tags/macos" title="macos">
-                            macos
+                        <a class="tag" href="/dotlog/tags/windows" title="windows">
+                            windows
                         </a>
                         
                     </div>
-                    <h1>GitHubで403エラーが出た時の対処法</h1>
+                    <h1>7-Zip</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
@@ -172,7 +176,7 @@
                             Kazuma Kano
                          
                         on 
-                        Saturday, July 10, 2021
+                        Friday, July 23, 2021
                         
                         
                         
@@ -200,26 +204,37 @@
                 <header>
                     <h2>TOC</h2>
                 </header>
-                <nav id="TableOfContents"></nav>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#7-zip">7-Zip</a></li>
+    <li><a href="#how-to-use">How to Use</a></li>
+  </ul>
+</nav>
                 
-                <p>Mac PCでGitHubのリモートリポジトリにプッシュしようとしたところ以下ようなエラーが出ました。
-過去の別のアカウントへのログイン情報を参照してしまっているようです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">remote: Permission to username/repositoryname.git denied to anotherusername.
-fatal: unable to access <span style="color:#f1fa8c">&#39;https://github.com/username/repositoryname.git/&#39;</span>: The requested URL returned error: <span style="color:#bd93f9">403</span>
-</code></pre></div><p>ローカルとグローバルそれぞれの設定ファイルを確認します。
-誤った<code>user.name</code>と<code>user.email</code>が設定されている場合はそれを修正します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">vim .git/config
-vim /.gitconfig
-</code></pre></div><p>Spotlight &gt; keychain access.app でキーチェーンアクセスを開きます。
-ログイン を選択すると、保存されているログイン情報の一覧を確認できます。
-GitHubのログイン情報は以下のようなアイコンが目印です。
-誤ったログイン情報が登録されている場合は、右クリック &gt; &ldquo;github.com&quot;を削除 からそれを削除します。
-
-  <img src="../../img/post-20210710-03.png" alt="icon">
+                <p><a href="https://ja.wikipedia.org/wiki/PPAP_(%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3)">PPAP</a>には全くもって意味がないのですが、未だに求められることがあります。
+ということでWindowsでzipファイルにパスワードを設定する方法についてまとめます。</p>
+<h1 id="7-zip">7-Zip</h1>
+<p>
+  <img src="https://sevenzip.osdn.jp/7ziplogo.png" alt="7-Zip">
 
 </p>
-<p>コマンドラインからでも編集できるようです。
-詳しくは<a href="https://docs.github.com/ja/github/getting-started-with-github/getting-started-with-git/updating-credentials-from-the-macos-keychain">公式のドキュメント</a>を参照してください。</p>
+<p>macOSにはzipファイルにパスワードを設定する機能が標準で搭載されているのですがWindows 10にはありません。
+そのため、別途ソフトウェアをインストールする必要があります。</p>
+<p>Windowsで使えるアーカイバはいくつかありますが、ここでは7-Zipを使用します。
+7-Zipはオープンソースのソフトウェアです。
+基本的にWindows向けですが、zip形式の他にtar形式などにも対応しています。</p>
+<p><a href="https://sevenzip.osdn.jp/">公式サイト</a>よりインストーラをダウンロードできます。</p>
+<h1 id="how-to-use">How to Use</h1>
+<p>まず、圧縮したいファイルを選択します。</p>
+<p>続いて、右クリック &gt; 7-Zip &gt; 圧縮 を選択すると以下のようなウィンドウが表示されます。
+ここでファイル名やパスワードなどを設定します。
+OK を選択するとzipファイルを生成します。
+
+  <img src="../../img/post-20210723-01.png" alt="Compression">
+
+</p>
+<p>これでパスワード付きzipファイルを作成できました。
+実際に作成したzipファイルを開こうとすると、パスワードを要求されることを確認できます。</p>
 
 
                 
@@ -228,13 +243,13 @@ GitHubのログイン情報は以下のようなアイコンが目印です。
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/dotlog/post/readme/" data-toggle="tooltip" data-placement="top" title="README">&larr;
+                        <a href="/dotlog/post/20210720-static-ip/" data-toggle="tooltip" data-placement="top" title="ラズパイの静的IPアドレスの設定方法">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/dotlog/post/2021-07-04-begin-github-pages/" data-toggle="tooltip" data-placement="top" title="GitHub Pagesを始める">Next
+                        <a href="/dotlog/post/20210724-cmd2sh/" data-toggle="tooltip" data-placement="top" title="cmd2sh">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -269,6 +284,18 @@ GitHubのログイン情報は以下のようなアイコンが目印です。
                         
                         <a href="/dotlog/tags/macos" title="macos">
                             macos
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/raspberry-pi" title="raspberry-pi">
+                            raspberry-pi
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/windows" title="windows">
+                            windows
                         </a>
                         
                         

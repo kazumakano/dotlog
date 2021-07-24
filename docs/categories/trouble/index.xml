@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>macos on .LOG</title>
-    <link>https://kazumakano.github.io/dotlog/tags/macos/</link>
-    <description>Recent content in macos on .LOG</description>
+    <title>trouble on .LOG</title>
+    <link>https://kazumakano.github.io/dotlog/categories/trouble/</link>
+    <description>Recent content in trouble on .LOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/categories/trouble/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHubで403エラーが出た時の対処法</title>
       <link>https://kazumakano.github.io/dotlog/post/20210710-github-403-error/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>raspberry pi on .LOG</title>
+    <link>https://kazumakano.github.io/dotlog/tags/raspberry-pi/</link>
+    <description>Recent content in raspberry pi on .LOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ラズパイの静的IPアドレスの設定方法</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210720-static-ip/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210720-static-ip/</guid>
+      <description>Raspberry Piに静的IPアドレスを設定する方法についてまとめます。 GUIで設定することもできますが、今回はCUIで行います。 まず、Raspberry</description>
+    </item>
+    
+  </channel>
+</rss>

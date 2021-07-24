@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="GitHub Pagesを始める" />
-    <meta property="og:title" content="GitHub Pagesを始める" />
-    <meta property="twitter:title" content="GitHub Pagesを始める" />
+    <meta name="title" content="ラズパイの静的IPアドレスの設定方法" />
+    <meta property="og:title" content="ラズパイの静的IPアドレスの設定方法" />
+    <meta property="twitter:title" content="ラズパイの静的IPアドレスの設定方法" />
     
 
     
-    <meta name="description" content="無料でサイトを公開する">
-    <meta property="og:description" content="無料でサイトを公開する" />
-    <meta property="twitter:description" content="無料でサイトを公開する" />
+    <meta name="description" content="confファイルを編集">
+    <meta property="og:description" content="confファイルを編集" />
+    <meta property="twitter:description" content="confファイルを編集" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>GitHub Pagesを始める-Blog for Study Information Engineering</title>
+    <title>ラズパイの静的IPアドレスの設定方法-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/post/2021-07-04-begin-github-pages/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20210720-static-ip/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -94,6 +94,14 @@
                         <a href="/dotlog/">Home</a>
                     </li>
                     
+                        
+                        <li>
+                            <a href="/dotlog/categories/trouble">trouble</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/dotlog/categories/util">util</a>
+                        </li>
                         
                         <li>
                             <a href="/dotlog/categories/web">web</a>
@@ -155,12 +163,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/dotlog/tags/github" title="github">
-                            github
+                        <a class="tag" href="/dotlog/tags/raspberry-pi" title="raspberry pi">
+                            raspberry pi
                         </a>
                         
                     </div>
-                    <h1>GitHub Pagesを始める</h1>
+                    <h1>ラズパイの静的IPアドレスの設定方法</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
@@ -168,7 +176,7 @@
                             Kazuma Kano
                          
                         on 
-                        Saturday, July 10, 2021
+                        Tuesday, July 20, 2021
                         
                         
                         
@@ -196,65 +204,25 @@
                 <header>
                     <h2>TOC</h2>
                 </header>
-                <nav id="TableOfContents">
-  <ul>
-    <li><a href="#github-pages">GitHub Pages</a></li>
-    <li><a href="#create-repository">Create Repository</a></li>
-    <li><a href="#push-source-code">Push Source Code</a></li>
-    <li><a href="#publish-site">Publish Site</a></li>
-  </ul>
-</nav>
+                <nav id="TableOfContents"></nav>
                 
-                <p>GitHub Pagesを利用してユーザサイトを公開する方法についてまとめます。</p>
-<h1 id="github-pages">GitHub Pages</h1>
-<p><a href="https://pages.github.com/">GitHub Pages</a>はGitHubが提供している静的なサイトホスティングサービスです。
-<a href="https://ja.wordpress.org/">WordPress</a>のようなCMSには対応していません。</p>
-<p>最低限必要となるのは以下の2つです。</p>
-<ul>
-<li>GitHubアカウント</li>
-<li>サイトのソースコード</li>
-</ul>
-<p>GitHub Pagesでサイトをホスティングするには、そのソースコードをGitHubのリポジトリに置く必要があります。
-リポジトリごとに1つまでのサイトをホスティングできます。
-また、任意のブランチのルートディレクトリあるいは<code>/docs</code>ディレクトリをサイトのベースとして設定できます。</p>
-<p>カスタムドメインを持っている場合はそれを使用することもできますが、デフォルトのドメインは<code>username.github.io</code>です。
-デフォルトのドメイン使用時には勝手にHTTPS経由で配信してくれます。</p>
-<p>GitHub PagesのサービスはFreeプランでも利用できます。</p>
-<p>詳しくは<a href="https://docs.github.com/ja/pages">公式のドキュメント</a>を参照してください。</p>
-<h1 id="create-repository">Create Repository</h1>
-<p>まずはリポジトリを作成します。</p>
-<p>Repositories &gt; New を選択すると以下のような画面が表示されます。
-ここでリポジトリの初期設定を行います。
-リポジトリ名はサイトのURLの一部になります。
-これらの設定は後からでも変更できます。
-
-  <img src="../../img/post-20210710-01.png" alt="Create a new repository">
-
-</p>
-<h1 id="push-source-code">Push Source Code</h1>
-<p>続いて、サイトのソースコードをプッシュします。</p>
-<p>ソースコードを管理しているディレクトリに移動します。
-ベースの<code>index.html</code>は<code>dirname</code>ディレクトリの直下あるいは<code>dirname/docs</code>ディレクトリに置いてある必要があります。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8be9fd;font-style:italic">cd</span> dirname
-</code></pre></div><p>Gitの設定ファイルを生成します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git init
-</code></pre></div><p>コミットします。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git add *
-git commit -m <span style="color:#f1fa8c">&#34;first commit&#34;</span>
-</code></pre></div><p>プッシュします。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git branch -m main 
-git remote add origin https://github.com/username/repositoryname.git
-git push -u origin main
-</code></pre></div><h1 id="publish-site">Publish Site</h1>
-<p>最後に、リポジトリのGitHub Pagesサービスを有効化してサイトを公開します。</p>
-<p>Repositories &gt; repositoryname &gt; Settings &gt; Pages を選択すると以下のような画面が表示されます。
-サイトのベースとなるブランチとディレクトリを設定し、Save を選択します。
-
-  <img src="../../img/post-20210710-02.png" alt="GitHub Pages">
-
-</p>
-<p>数分後、<code>https://username.github.io/repositoryname/</code>にアクセスするとサイトが配信されていることが確認できます。</p>
-
+                <p>Raspberry Piに静的IPアドレスを設定する方法についてまとめます。</p>
+<p>GUIで設定することもできますが、今回はCUIで行います。</p>
+<p>まず、Raspberry PiのIPアドレスを確認してSSHで接続します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ssh username@192.168.207.xxx
+</code></pre></div><p>続いて、適当なエディタで<code>/etc/dhcpcd.conf</code>を編集します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">vim /etc/dhcpcd.conf
+</code></pre></div><p>以下のような記述を追加します。
+interfaceはWi-Fiであればwlan0、Ethernetであればeth0を設定します。</p>
+<pre><code>interface wlan0
+static ip_address=192.168.207.yyy/24
+static routers=192.168.207.1
+static domain_name_servers=192.168.207.1
+</code></pre><p>編集を保存したら再起動します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo reboot
+</code></pre></div><p>再度SSHで接続して以下のコマンドを実行すると、IPアドレスが指定したものになっていることを確認できます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ifconfig
+</code></pre></div>
 
                 
 
@@ -262,10 +230,15 @@ git push -u origin main
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/dotlog/post/2021-07-04-keychain/" data-toggle="tooltip" data-placement="top" title="GitHubで403エラーが出た時の対処法">&larr;
+                        <a href="/dotlog/post/20210711-brave/" data-toggle="tooltip" data-placement="top" title="Brave">&larr;
                             Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/dotlog/post/20210723-7-zip/" data-toggle="tooltip" data-placement="top" title="7-Zip">Next
+                            Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -298,6 +271,18 @@ git push -u origin main
                         
                         <a href="/dotlog/tags/macos" title="macos">
                             macos
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/raspberry-pi" title="raspberry-pi">
+                            raspberry-pi
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/windows" title="windows">
+                            windows
                         </a>
                         
                         

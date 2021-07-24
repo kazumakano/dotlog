@@ -6,13 +6,22 @@
     <description>Recent content in web on .LOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GitHub Pagesを始める</title>
-      <link>https://kazumakano.github.io/dotlog/post/2021-07-04-begin-github-pages/</link>
+      <title>Brave</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210711-brave/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210711-brave/</guid>
+      <description>Braveというブラウザについてまとめます。 Brave BraveはChromeやEdgeと同様Chromiumをベースに開発されたブラウザです。 Ch</description>
+    </item>
+    
+    <item>
+      <title>GitHub Pages</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210710-github-pages/</link>
       <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazumakano.github.io/dotlog/post/2021-07-04-begin-github-pages/</guid>
+      <guid>https://kazumakano.github.io/dotlog/post/20210710-github-pages/</guid>
       <description>GitHub Pagesを利用してユーザサイトを公開する方法についてまとめます。 GitHub Pages GitHub PagesはGitHubが提供している静的なサイトホスティングサー</description>
     </item>
     

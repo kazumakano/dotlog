@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="README" />
-    <meta property="og:title" content="README" />
-    <meta property="twitter:title" content="README" />
+    <meta name="title" content="GitHubで403エラーが出た時の対処法" />
+    <meta property="og:title" content="GitHubで403エラーが出た時の対処法" />
+    <meta property="twitter:title" content="GitHubで403エラーが出た時の対処法" />
     
 
     
-    <meta name="description" content="当ブログについて">
-    <meta property="og:description" content="当ブログについて" />
-    <meta property="twitter:description" content="当ブログについて" />
+    <meta name="description" content="キーチェーンアクセスからログイン情報を削除">
+    <meta property="og:description" content="キーチェーンアクセスからログイン情報を削除" />
+    <meta property="twitter:description" content="キーチェーンアクセスからログイン情報を削除" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>README-Blog for Study Information Engineering</title>
+    <title>GitHubで403エラーが出た時の対処法-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/post/readme/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20210710-github-403-error/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -163,8 +163,16 @@
                 <div class="post-heading">
                     <div class="tags">
                         
+                        <a class="tag" href="/dotlog/tags/github" title="github">
+                            github
+                        </a>
+                        
+                        <a class="tag" href="/dotlog/tags/macos" title="macos">
+                            macos
+                        </a>
+                        
                     </div>
-                    <h1>README</h1>
+                    <h1>GitHubで403エラーが出た時の対処法</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
@@ -202,18 +210,36 @@
                 </header>
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#contents">Contents</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#git-config">Git Config</a></li>
+    <li><a href="#keychain-access">Keychain Access</a></li>
   </ul>
 </nav>
                 
-                <h1 id="contents">Contents</h1>
-<p>当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。
-掲載内容については、常にベストエフォートを心掛けますがその正確性を保証するものではありません。</p>
-<h1 id="license">License</h1>
-<p>当ブログはHuabing Zhao氏の<a href="https://github.com/zhaohuabing/hugo-theme-cleanwhite">Clean White</a>を基に作られています。
-また、当ブログのソースコードもGitHub上で公開されており、Apache License Version 2.0に則って利用することができます。</p>
-<p>ただし、画像については無断での二次利用を認めません。</p>
+                <p>Mac PCでGitHubのリモートリポジトリにプッシュしようとしたところ以下ようなエラーが出ました。
+過去の別のアカウントへのログイン情報を参照してしまっているようです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">remote: Permission to username/repositoryname.git denied to anotherusername.
+fatal: unable to access <span style="color:#f1fa8c">&#39;https://github.com/username/repositoryname.git/&#39;</span>: The requested URL returned error: <span style="color:#bd93f9">403</span>
+</code></pre></div><h1 id="git-config">Git Config</h1>
+<p>Gitの設定が間違っている可能性があります。</p>
+<p>以下のコマンドを実行すると設定の一覧が表示されます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git config --list
+</code></pre></div><p>誤った<code>user.name</code>と<code>user.email</code>が設定されている場合はそれを修正します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git config --local/global user.name username
+git config --local/global user.email email.com
+</code></pre></div><p>configファイルを直接編集しても良いです。
+ローカルの設定は<code>.git/config</code>、グローバルの設定は<code>~/.gitconfig</code>に記述されています。</p>
+<h1 id="keychain-access">Keychain Access</h1>
+<p>また、MacOSのキーチェーンアクセスに誤ったログイン情報が保存されている可能性もあります。</p>
+<p>Spotlight &gt; keychain access.app でキーチェーンアクセスを開きます。
+ログイン を選択すると、保存されているログイン情報の一覧が表示されます。
+GitHubのログイン情報は以下のようなアイコンが目印です。
+誤ったログイン情報が登録されている場合は、右クリック &gt; &ldquo;github.com&quot;を削除 からそれを削除します。
+
+  <img src="../../img/post-20210710-03.png" alt="Icon">
+
+</p>
+<p>ターミナルからでも編集できるようです。
+詳しくは<a href="https://docs.github.com/ja/github/getting-started-with-github/getting-started-with-git/updating-credentials-from-the-macos-keychain">公式のドキュメント</a>を参照してください。</p>
 
 
                 
@@ -221,9 +247,14 @@
                 <hr>
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/dotlog/post/readme/" data-toggle="tooltip" data-placement="top" title="README">&larr;
+                            Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/dotlog/post/20210710-github-403-error/" data-toggle="tooltip" data-placement="top" title="GitHubで403エラーが出た時の対処法">Next
+                        <a href="/dotlog/post/20210710-github-pages/" data-toggle="tooltip" data-placement="top" title="GitHub Pages">Next
                             Post &rarr;</a>
                     </li>
                     

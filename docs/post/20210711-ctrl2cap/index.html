@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="README" />
-    <meta property="og:title" content="README" />
-    <meta property="twitter:title" content="README" />
+    <meta name="title" content="Ctrl2Cap" />
+    <meta property="og:title" content="Ctrl2Cap" />
+    <meta property="twitter:title" content="Ctrl2Cap" />
     
 
     
-    <meta name="description" content="当ブログについて">
-    <meta property="og:description" content="当ブログについて" />
-    <meta property="twitter:description" content="当ブログについて" />
+    <meta name="description" content="Caps LockキーにCtrlを割り当てる">
+    <meta property="og:description" content="Caps LockキーにCtrlを割り当てる" />
+    <meta property="twitter:description" content="Caps LockキーにCtrlを割り当てる" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>README-Blog for Study Information Engineering</title>
+    <title>Ctrl2Cap-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/post/readme/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20210711-ctrl2cap/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -163,8 +163,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
+                        <a class="tag" href="/dotlog/tags/windows" title="windows">
+                            windows
+                        </a>
+                        
                     </div>
-                    <h1>README</h1>
+                    <h1>Ctrl2Cap</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
@@ -172,7 +176,7 @@
                             Kazuma Kano
                          
                         on 
-                        Saturday, July 10, 2021
+                        Sunday, July 11, 2021
                         
                         
                         
@@ -202,28 +206,47 @@
                 </header>
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#contents">Contents</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#ctrl2cap">Ctrl2Cap</a></li>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#uninstall">Uninstall</a></li>
   </ul>
 </nav>
                 
-                <h1 id="contents">Contents</h1>
-<p>当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。
-掲載内容については、常にベストエフォートを心掛けますがその正確性を保証するものではありません。</p>
-<h1 id="license">License</h1>
-<p>当ブログはHuabing Zhao氏の<a href="https://github.com/zhaohuabing/hugo-theme-cleanwhite">Clean White</a>を基に作られています。
-また、当ブログのソースコードもGitHub上で公開されており、Apache License Version 2.0に則って利用することができます。</p>
-<p>ただし、画像については無断での二次利用を認めません。</p>
-
+                <p>Macのキーボードではcontrolキーが配置されているところに、WindowsのキーボードではCaps Lockキーが配置されています。
+よく押し間違えてしまう上に、そもそもCaps Lockを使う機会がないので、Caps LockキーにCtrlを割り当ててしまおうと思います。</p>
+<p>WindowsでCaps LockキーにCtrlを割り当てる方法はいくつかあるようですが、ここではCtrl2Capというソフトウェアを使います。</p>
+<h1 id="ctrl2cap">Ctrl2Cap</h1>
+<p>Ctrl2CapはMicrosoftが公式で用意してくれているソフトウェアです。
+もちろんWindows専用です。</p>
+<p><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/ctrl2cap">公式ドキュメント</a>にダウンロードリンクがあります。</p>
+<h1 id="install">Install</h1>
+<p>まずはドキュメントにあるリンクからzipファイルをダウンロードして展開します。</p>
+<p>続いて、コマンドプロンプトを<strong>管理者として</strong>開きます。</p>
+<p>先ほど展開したディレクトリに移動します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#ff79c6">cd</span> <span style="color:#8be9fd;font-style:italic">%HOMEPATH%</span>¥Downloads¥Ctrl2Cap
+</code></pre></div><p>以下のコマンドを実行するとインストーラが走ります。
+<code>Ctrl2cap successfully installed. You must reboot for it to take effect.</code>と表示されれば成功です。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">ctrl2cap /install
+</code></pre></div><p>その後再起動すると、Caps LockキーにCtrlが割り当てられています。</p>
+<h1 id="uninstall">Uninstall</h1>
+<p>戻したくなったらアンインストールすれば良いです。</p>
+<p>インストール時と同様に、以下のコマンドでアンインストールできます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">ctrl2cap /uninstall
+</code></pre></div>
 
                 
 
                 <hr>
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/dotlog/post/20210710-github-pages/" data-toggle="tooltip" data-placement="top" title="GitHub Pages">&larr;
+                            Previous Post</a>
+                    </li>
+                    
                     
                     <li class="next">
-                        <a href="/dotlog/post/20210710-github-403-error/" data-toggle="tooltip" data-placement="top" title="GitHubで403エラーが出た時の対処法">Next
+                        <a href="/dotlog/post/20210711-brave/" data-toggle="tooltip" data-placement="top" title="Brave">Next
                             Post &rarr;</a>
                     </li>
                     

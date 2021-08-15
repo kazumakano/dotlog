@@ -63,7 +63,7 @@ home = ["HTML", "RSS", "Algolia"]
 
   [params.social]
   #rss            = true 
-  email          = "kazuma@ucl.nuee.nagoya-u.ac.jp"
+  email          = "kazumakano@outlook.jp"
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
   #twitter       = "https://twitter.com/KazumaKano"

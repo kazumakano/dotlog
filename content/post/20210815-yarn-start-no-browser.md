@@ -20,10 +20,10 @@ published:   true
 
 # Edit start.js
 
-Reactのプロジェクトディレクトリで`yarn start`を実行すると、コンソールに`$ react-scripts start`と表示されます。
-react-scriptsパッケージの`start.js`というスクリプトが呼び出されているようです。
+プロジェクトの`package.json`を見ると`scripts.start`が`"react-scripts start"`になっています。
+`yarn start`を実行するとreact-scriptsパッケージの`start.js`というスクリプトが呼び出されているようです。
 
-そこで、呼び出されているスクリプトを編集します。
+そこで、呼び出されているスクリプトを直接編集します。
 
 まず、エディタで`node_modules/react-scripts/scripts/start.js`を開きます。
 続いて、以下の文をコメントアウトして保存します。

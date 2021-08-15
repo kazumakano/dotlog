@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on .LOG</title>
+    <link>https://kazumakano.github.io/dotlog/tags/latex/</link>
+    <description>Recent content in latex on .LOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 04 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LaTexにおける場合分けの環境</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210804-latex-cases/</link>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210804-latex-cases/</guid>
+      <description>LaTexで場合分けを記述するための環境についてまとめます。 cases casesは場合分けを記述するための環境の1つです。 使用するにはamsmath</description>
+    </item>
+    
+  </channel>
+</rss>

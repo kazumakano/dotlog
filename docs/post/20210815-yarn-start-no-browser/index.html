@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="yarn startでブラウザを開かせない方法" />
+    <meta property="og:title" content="yarn startでブラウザを開かせない方法" />
+    <meta property="twitter:title" content="yarn startでブラウザを開かせない方法" />
     
 
     
-    <meta name="description" content="当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。">
-    <meta property="og:description" content="当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。" />
-    <meta property="twitter:description" content="当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。" />
+    <meta name="description" content="start.jsを編集">
+    <meta property="og:description" content="start.jsを編集" />
+    <meta property="twitter:description" content="start.jsを編集" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>Blog for Study Information Engineering</title>
+    <title>yarn startでブラウザを開かせない方法-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/top/about/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20210815-yarn-start-no-browser/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -150,14 +150,37 @@
 
 
 
-<header class="intro-header" style="background-image: url('/dotlog/img/home-waiotapu-blue.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/dotlog/true')
+    }
+</style>
+<header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>.LOG </h1>
-                    
-		    <span class="subheading">Blog for Study Information Engineering</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/dotlog/tags/react" title="react">
+                            react
+                        </a>
+                        
+                    </div>
+                    <h1>yarn startでブラウザを開かせない方法</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                            Kazuma Kano
+                         
+                        on 
+                        Sunday, August 15, 2021
+                        
+                        
+                        
+                    </span>
                 </div>
             </div>
         </div>
@@ -177,7 +200,43 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	<p>Under construction</p>
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#edit-startjs">Edit start.js</a></li>
+  </ul>
+</nav>
+                
+                <p><a href="https://ja.reactjs.org/">React</a>では<code>yarn start</code>あるいは<code>npm start</code>コマンドで開発サーバを起動します。</p>
+<p>このとき、既にChromeのウィンドウがあればそのウィンドウに移動し、なければ新しいウィンドウが開かれます。
+別の操作スペースだろうと勝手に移動されるので結構鬱陶しいです。
+また、別のブラウザをデフォルトのブラウザとして設定していてもChromeが開かれてしまいます。</p>
+<p>そこで、<code>yarn start</code>を実行してもブラウザを開かせないようにする方法についてまとめます。</p>
+<h1 id="edit-startjs">Edit start.js</h1>
+<p>Reactのプロジェクトディレクトリで<code>yarn start</code>を実行すると、コンソールに<code>$ react-scripts start</code>と表示されます。
+react-scriptsパッケージの<code>start.js</code>というスクリプトが呼び出されているようです。</p>
+<p>そこで、呼び出されているスクリプトを編集します。</p>
+<p>まず、エディタで<code>node_modules/react-scripts/scripts/start.js</code>を開きます。
+続いて、以下の文をコメントアウトして保存します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">openBrowser(urls.localUrlForBrowser);
+</code></pre></div><p>これで、yarn startでブラウザを開かせないようにすることができました。</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/dotlog/post/20210804-latex-cases/" data-toggle="tooltip" data-placement="top" title="LaTexにおける場合分けの環境">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
 
                 
 <div id="disqus-comment"></div>
@@ -201,37 +260,37 @@
                         
                         
                         <a href="/dotlog/tags/github" title="github">
-                        github
+                            github
                         </a>
                         
                         
                         
                         <a href="/dotlog/tags/latex" title="latex">
-                        latex
+                            latex
                         </a>
                         
                         
                         
                         <a href="/dotlog/tags/macos" title="macos">
-                        macos
+                            macos
                         </a>
                         
                         
                         
                         <a href="/dotlog/tags/raspberry-pi" title="raspberry-pi">
-                        raspberry-pi
+                            raspberry-pi
                         </a>
                         
                         
                         
                         <a href="/dotlog/tags/react" title="react">
-                        react
+                            react
                         </a>
                         
                         
                         
                         <a href="/dotlog/tags/windows" title="windows">
-                        windows
+                            windows
                         </a>
                         
                         

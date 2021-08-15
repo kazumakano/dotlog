@@ -260,10 +260,10 @@ rm       = del $*
 ただし、どこからでも使えるようにするためにはパスを通してやる必要があります。</p>
 <p>まず、バッチファイルを作成します。
 以下は<code>grep.cmd</code>の実装例です。</p>
-<pre><code>@echo You can use &quot;.*&quot; as wild card
-@echo.
-@findstr /n %*
-</code></pre><p>コマンドプロンプトの<code>findstr</code>コマンドを利用しています。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">@<span style="color:#ff79c6">echo</span> You can use <span style="color:#f1fa8c">&#34;.*&#34;</span> as wild card
+@<span style="color:#ff79c6">echo</span>.
+@findstr /n <span style="color:#8be9fd;font-style:italic">%*</span>
+</code></pre></div><p>コマンドプロンプトの<code>findstr</code>コマンドを利用しています。
 ワイルドカードの仕様がややこしいので、<code>echo</code>コマンドでその旨の文章を表示しています。
 命令文の前に<code>@</code>を付けることで、命令文をいちいちコンソールに出力しないようにしています。</p>
 <p>続いて、先ほど作成したバッチファイルが置いてあるディレクトリにパスを通します。</p>
@@ -312,6 +312,11 @@ rm       = del $*
                     </li>
                     
                     
+                    <li class="next">
+                        <a href="/dotlog/post/20210804-latex-cases/" data-toggle="tooltip" data-placement="top" title="LaTexにおける場合分けの環境">Next
+                            Post &rarr;</a>
+                    </li>
+                    
                 </ul>
 
                 
@@ -341,6 +346,12 @@ rm       = del $*
                         
                         
                         
+                        <a href="/dotlog/tags/latex" title="latex">
+                            latex
+                        </a>
+                        
+                        
+                        
                         <a href="/dotlog/tags/macos" title="macos">
                             macos
                         </a>
@@ -349,6 +360,12 @@ rm       = del $*
                         
                         <a href="/dotlog/tags/raspberry-pi" title="raspberry-pi">
                             raspberry-pi
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/react" title="react">
+                            react
                         </a>
                         
                         

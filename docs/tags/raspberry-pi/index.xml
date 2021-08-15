@@ -8,7 +8,7 @@
     <language>ja</language>
     <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ラズパイの静的IPアドレスの設定方法</title>
+      <title>ラズパイに静的IPアドレスを設定する方法</title>
       <link>https://kazumakano.github.io/dotlog/post/20210720-static-ip/</link>
       <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
       

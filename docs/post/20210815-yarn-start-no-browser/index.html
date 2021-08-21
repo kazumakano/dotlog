@@ -212,17 +212,17 @@
                 
                 <p><a href="https://ja.reactjs.org/">React</a>では<code>yarn start</code>あるいは<code>npm start</code>コマンドで開発サーバを起動します。</p>
 <p>このとき、既にChromeのウィンドウがあればそのウィンドウに移動し、なければ新しいウィンドウが開かれます。
-別の操作スペースだろうと勝手に移動されるので結構鬱陶しいです。
-また、別のブラウザをデフォルトのブラウザとして設定していてもChromeが開かれてしまいます。</p>
-<p>そこで、<code>yarn start</code>を実行してもブラウザを開かせないようにする方法についてまとめます。</p>
+別の操作スペースだろうと勝手に移動されるので結構鬱陶しいです。</p>
+<p>また、別のブラウザをデフォルトのブラウザとして設定していてもChromeが開かれてしまいます。</p>
+<p>そこで今回は、<code>yarn start</code>を実行する際にブラウザを開かせないようにします。</p>
 <h1 id="edit-startjs">Edit start.js</h1>
-<p>Reactのプロジェクトディレクトリで<code>yarn start</code>を実行すると、コンソールに<code>$ react-scripts start</code>と表示されます。
-react-scriptsパッケージの<code>start.js</code>というスクリプトが呼び出されているようです。</p>
-<p>そこで、呼び出されているスクリプトを編集します。</p>
-<p>まず、エディタで<code>node_modules/react-scripts/scripts/start.js</code>を開きます。
-続いて、以下の文をコメントアウトして保存します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">openBrowser(urls.localUrlForBrowser);
-</code></pre></div><p>これで、yarn startでブラウザを開かせないようにすることができました。</p>
+<p>プロジェクトの<code>package.json</code>を見ると<code>scripts.start</code>が<code>&quot;react-scripts start&quot;</code>になっています。
+<code>yarn start</code>を実行するとreact-scriptsパッケージの<code>start.js</code>というスクリプトが呼び出されているようです。</p>
+<p>そこで、呼び出されているスクリプトを直接編集します。</p>
+<p>まず、エディタで<code>node_modules/react-scripts/scripts/start.js</code>を開きます。</p>
+<p>続いて、以下の文をコメントアウトして保存します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// openBrowser(urls.localUrlForBrowser);
+</span></code></pre></div><p>これで、<code>yarn start</code>でブラウザを開かせないようにすることができました。</p>
 
 
                 
@@ -316,7 +316,7 @@ react-scriptsパッケージの<code>start.js</code>というスクリプトが�
                    
                     
                     <li>
-                        <a href="mailto:kazuma@ucl.nuee.nagoya-u.ac.jp">
+                        <a href="mailto:kazumakano@outlook.jp">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>

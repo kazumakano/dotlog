@@ -14,9 +14,10 @@ published:   true
 
 このとき、既にChromeのウィンドウがあればそのウィンドウに移動し、なければ新しいウィンドウが開かれます。
 別の操作スペースだろうと勝手に移動されるので結構鬱陶しいです。
+
 また、別のブラウザをデフォルトのブラウザとして設定していてもChromeが開かれてしまいます。
 
-そこで、`yarn start`を実行してもブラウザを開かせないようにする方法についてまとめます。
+そこで今回は、`yarn start`を実行する際にブラウザを開かせないようにします。
 
 # Edit start.js
 
@@ -26,9 +27,10 @@ published:   true
 そこで、呼び出されているスクリプトを直接編集します。
 
 まず、エディタで`node_modules/react-scripts/scripts/start.js`を開きます。
+
 続いて、以下の文をコメントアウトして保存します。
 ```js
-openBrowser(urls.localUrlForBrowser);
+// openBrowser(urls.localUrlForBrowser);
 ```
 
-これで、yarn startでブラウザを開かせないようにすることができました。
+これで、`yarn start`でブラウザを開かせないようにすることができました。

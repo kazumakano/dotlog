@@ -1,6 +1,6 @@
 baseurl = "https://kazumakano.github.io/dotlog"
 title = ".LOG"
-theme = "hugo-theme-cleanwhite"
+theme = "clean-white"
 languageCode = "ja"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""

@@ -1,126 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Huabing Blog</title>
-    <link>https://kazumakano.github.io/blog/tags/</link>
-    <description>Recent content in Tags on Huabing Blog</description>
+    <title>Tags on .LOG</title>
+    <link>https://kazumakano.github.io/dotlog/tags/</link>
+    <description>Recent content in Tags on .LOG</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Istio</title>
-      <link>https://kazumakano.github.io/blog/tags/istio/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      <title>react</title>
+      <link>https://kazumakano.github.io/dotlog/tags/react/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazumakano.github.io/blog/tags/istio/</guid>
+      <guid>https://kazumakano.github.io/dotlog/tags/react/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>ubuntu</title>
-      <link>https://kazumakano.github.io/blog/tags/ubuntu/</link>
-      <pubDate>Thu, 24 May 2018 00:00:00 +0000</pubDate>
+      <title>latex</title>
+      <link>https://kazumakano.github.io/dotlog/tags/latex/</link>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazumakano.github.io/blog/tags/ubuntu/</guid>
+      <guid>https://kazumakano.github.io/dotlog/tags/latex/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Microservice</title>
-      <link>https://kazumakano.github.io/blog/tags/microservice/</link>
-      <pubDate>Wed, 23 May 2018 18:00:00 +0000</pubDate>
+      <title>windows</title>
+      <link>https://kazumakano.github.io/dotlog/tags/windows/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazumakano.github.io/blog/tags/microservice/</guid>
+      <guid>https://kazumakano.github.io/dotlog/tags/windows/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Security</title>
-      <link>https://kazumakano.github.io/blog/tags/security/</link>
-      <pubDate>Wed, 23 May 2018 18:00:00 +0000</pubDate>
+      <title>raspberry pi</title>
+      <link>https://kazumakano.github.io/dotlog/tags/raspberry-pi/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazumakano.github.io/blog/tags/security/</guid>
+      <guid>https://kazumakano.github.io/dotlog/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://kazumakano.github.io/blog/tags/kubernetes/</link>
-      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      <title>github</title>
+      <link>https://kazumakano.github.io/dotlog/tags/github/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazumakano.github.io/blog/tags/kubernetes/</guid>
+      <guid>https://kazumakano.github.io/dotlog/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Travel</title>
-      <link>https://kazumakano.github.io/blog/tags/travel/</link>
-      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      <title>macos</title>
+      <link>https://kazumakano.github.io/dotlog/tags/macos/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://kazumakano.github.io/blog/tags/travel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Helm</title>
-      <link>https://kazumakano.github.io/blog/tags/helm/</link>
-      <pubDate>Mon, 16 Apr 2018 15:00:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/blog/tags/helm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>API Gateway</title>
-      <link>https://kazumakano.github.io/blog/tags/api-gateway/</link>
-      <pubDate>Wed, 11 Apr 2018 09:32:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/blog/tags/api-gateway/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>service Mesh</title>
-      <link>https://kazumakano.github.io/blog/tags/service-mesh/</link>
-      <pubDate>Wed, 11 Apr 2018 09:32:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/blog/tags/service-mesh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://kazumakano.github.io/blog/tags/docker/</link>
-      <pubDate>Tue, 13 Mar 2018 18:00:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/blog/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tips</title>
-      <link>https://kazumakano.github.io/blog/tags/tips/</link>
-      <pubDate>Tue, 13 Mar 2018 18:00:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/blog/tags/tips/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://kazumakano.github.io/blog/tags/vim/</link>
-      <pubDate>Fri, 09 Feb 2018 11:00:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/blog/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nginmesh</title>
-      <link>https://kazumakano.github.io/blog/tags/nginmesh/</link>
-      <pubDate>Tue, 02 Jan 2018 12:00:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/blog/tags/nginmesh/</guid>
+      <guid>https://kazumakano.github.io/dotlog/tags/macos/</guid>
       <description></description>
     </item>
     

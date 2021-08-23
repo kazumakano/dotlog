@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github on .LOG</title>
+    <link>https://kazumakano.github.io/dotlog/tags/github/</link>
+    <description>Recent content in github on .LOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Pages</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210710-github-pages/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210710-github-pages/</guid>
+      <description>GitHub Pagesを利用してユーザサイトを公開する方法についてまとめます。 GitHub Pages GitHub PagesはGitHubが提供している静的なサイトホスティングサー</description>
+    </item>
+    
+    <item>
+      <title>GitHubで403エラーが出た時の対処法</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210710-github-403-error/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210710-github-403-error/</guid>
+      <description>Mac PCでGitHubのリモートリポジトリにプッシュしようとしたところ以下ようなエラーが出ました。 過去の別のアカウントへのログイン情報を参照し</description>
+    </item>
+    
+  </channel>
+</rss>

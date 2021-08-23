@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on .LOG</title>
+    <link>https://kazumakano.github.io/dotlog/tags/windows/</link>
+    <description>Recent content in windows on .LOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cmd2sh</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210724-cmd2sh/</link>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210724-cmd2sh/</guid>
+      <description>LinuxやUnixに慣れていると、Windowsのコマンドプロンプトでもついlsとタイプしてしまうことがあります。 コマンドプロンプトにはl</description>
+    </item>
+    
+    <item>
+      <title>7-Zip</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210723-7-zip/</link>
+      <pubDate>Fri, 23 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210723-7-zip/</guid>
+      <description>PPAPには全くもって意味がないのですが、未だに求められることがあります。 ということでWindowsでzipファイルにパスワードを設定する方</description>
+    </item>
+    
+    <item>
+      <title>Ctrl2Cap</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210711-ctrl2cap/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210711-ctrl2cap/</guid>
+      <description>Macのキーボードではcontrolキーが配置されているところに、WindowsのキーボードではCaps Lockキーが配置されています。 よく</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content=".LOG">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://kazumakano.github.io/dotlog/img/home-waiotapu-blue.jpg">
+    <meta property="twitter:image" content="https://kazumakano.github.io/dotlog/img/home-waiotapu-blue.jpg" />
+    
+
+    
+    <meta name="title" content="Brave" />
+    <meta property="og:title" content="Brave" />
+    <meta property="twitter:title" content="Brave" />
+    
+
+    
+    <meta name="description" content="広告をブロックしてくれるブラウザ">
+    <meta property="og:description" content="広告をブロックしてくれるブラウザ" />
+    <meta property="twitter:description" content="広告をブロックしてくれるブラウザ" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
+    <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
+
+    <title>Brave-Blog for Study Information Engineering</title>
+
+    <link rel="canonical" href="/dotlog/dotlog/post/20210711-brave/">
+
+    <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="/dotlog/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/dotlog/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/dotlog/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/dotlog/js/jquery.min.js"></script>
+
+    
+    <script src="/dotlog/js/bootstrap.min.js"></script>
+
+    
+    <script src="/dotlog/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/dotlog/">.LOG</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/dotlog/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/dotlog/categories/trouble">trouble</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/dotlog/categories/util">util</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/dotlog/categories/web">web</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/dotlog/true')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Brave</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                            Kazuma Kano
+                         
+                        on 
+                        Sunday, July 11, 2021
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#brave">Brave</a></li>
+    <li><a href="#shields">Shields</a></li>
+    <li><a href="#rewards">Rewards</a>
+      <ul>
+        <li><a href="#how-to-get-started">How to get started</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                
+                <p>Braveというブラウザについてまとめます。</p>
+<h1 id="brave">Brave</h1>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://player.vimeo.com/video/454158051" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+<p><a href="https://brave.com/ja/">Brave</a>はChromeやEdgeと同様Chromiumをベースに開発されたブラウザです。
+Chromeの拡張機能やテーマなどをそのまま使用できることもあり、使い勝手はChromeに近いです。</p>
+<p>開発者はJavaScriptの開発者としても知られるBrendan Eich氏です。</p>
+<p>Windows、macOS、Linux、Android、iOSに対応しています。</p>
+<h1 id="shields">Shields</h1>
+<p>ShieldsはBraveの目玉機能の1つです。</p>
+<p>トラッカーや広告を自動でブロックしてくれます。
+ブログサイトなどでのバナー広告だけでなく、YouTubeなどでの動画広告もブロックしてくれるので、普段からブラウザでYouTubeを見る人におすすめです。</p>
+<p>また、広告を読み込まない分通信容量が抑えられる上に高速です。
+<a href="https://www.lab-kadokawa.com/release/pdf/149.pdf">角川アスキー総合研究所のデータ</a>を見る限り、確かに他の主要なブラウザと比べて速いことがわかります。
+体感としては気持ち程度です。</p>
+<h1 id="rewards">Rewards</h1>
+<p><a href="https://brave.com/ja/brave-rewards/">Rewards</a>もBraveの目玉機能の1つです。</p>
+<p>ユーザの興味や感心を推測し、それに基づいた広告を表示します。
+この情報はローカルのデバイスにのみ保存され、サーバに送られることはありません。</p>
+<p>この広告を見ることへの報酬として、BATという仮想通貨を受け取ることができます。
+正直なところ広告には気付かないので、ブラウザを使っているだけで勝手に仮想通貨が溜まっていくイメージです。
+少額ではありますが塵も積もればなんとやら。</p>
+<p>この機能を有効にするかどうかは任意です。
+表示回数は1時間あたり最大5回までを自由に選択できますす。</p>
+<p>ただし、Rewardsは2021年7月時点でデスクトップ版限定の機能です。
+スマホアプリ版では利用できません。</p>
+<p>また、支払日は毎月8日ですがあまり正確ではありません。</p>
+<h2 id="how-to-get-started">How to get started</h2>
+<p>Rewardsを始めるのに必要となるのは以下の2つです。</p>
+<ul>
+<li>デスクトップ版Brave</li>
+<li>bitFlyerアカウント</li>
+</ul>
+<p>まずはbitFlyerのアカウントを作成します。</p>
+<p><a href="https://bitflyer.com/ja-jp/">bitFlyer</a>は仮想通貨取引アプリの一つです。
+アカウントは無料で作成できます。
+本人確認の手続きが少々面倒ですが、審査の待ち時間を含めても数時間で完了するかと思います。</p>
+<p>続いて、RewardsにbitFlyerアカウントを連携します。</p>
+<p>メニュー &gt; Brave Rewards を選択するとRewardsの設定ページが開きます。
+ここで広告のON/OFFや表示回数などを設定できます。
+ウォレットを認証 を選択後、bitFlyerアカウントの情報を入力します。
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/rRX2tgZb7ys" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+<p>これでRewardsの設定は完了です。</p>
+<p>bitFlyerで新規に口座を開設してRewardsと連携すると1000円分のBATがもらえるというキャンペーンがこれまでに２度行われています。
+このキャンペーンがまた開催されるのを待ってみるのもアリかもしれません。</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/dotlog/post/20210711-ctrl2cap/" data-toggle="tooltip" data-placement="top" title="Ctrl2Cap">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/dotlog/post/20210720-static-ip/" data-toggle="tooltip" data-placement="top" title="ラズパイに静的IPアドレスを設定する方法">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/dotlog/tags/github" title="github">
+                            github
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/latex" title="latex">
+                            latex
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/macos" title="macos">
+                            macos
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/raspberry-pi" title="raspberry-pi">
+                            raspberry-pi
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/react" title="react">
+                            react
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/windows" title="windows">
+                            windows
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    <li>
+                        <a href="mailto:kazumakano@outlook.jp">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/kazumakano">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; .LOG 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content=".LOG">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://kazumakano.github.io/dotlog/img/home-waiotapu-blue.jpg">
+    <meta property="twitter:image" content="https://kazumakano.github.io/dotlog/img/home-waiotapu-blue.jpg" />
+    
+
+    
+    <meta name="title" content="7-Zip" />
+    <meta property="og:title" content="7-Zip" />
+    <meta property="twitter:title" content="7-Zip" />
+    
+
+    
+    <meta name="description" content="zipファイルにパスワードを設定">
+    <meta property="og:description" content="zipファイルにパスワードを設定" />
+    <meta property="twitter:description" content="zipファイルにパスワードを設定" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
+    <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
+
+    <title>7-Zip-Blog for Study Information Engineering</title>
+
+    <link rel="canonical" href="/dotlog/dotlog/post/20210723-7-zip/">
+
+    <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="/dotlog/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/dotlog/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/dotlog/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/dotlog/js/jquery.min.js"></script>
+
+    
+    <script src="/dotlog/js/bootstrap.min.js"></script>
+
+    
+    <script src="/dotlog/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/dotlog/">.LOG</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/dotlog/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/dotlog/categories/trouble">trouble</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/dotlog/categories/util">util</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/dotlog/categories/web">web</a>
+                        </li>
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/dotlog/true')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/dotlog/tags/windows" title="windows">
+                            windows
+                        </a>
+                        
+                    </div>
+                    <h1>7-Zip</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                            Kazuma Kano
+                         
+                        on 
+                        Friday, July 23, 2021
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#7-zip">7-Zip</a></li>
+    <li><a href="#how-to-use">How to Use</a></li>
+  </ul>
+</nav>
+                
+                <p><a href="https://ja.wikipedia.org/wiki/PPAP_(%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3)">PPAP</a>には全くもって意味がないのですが、未だに求められることがあります。
+ということでWindowsでzipファイルにパスワードを設定する方法についてまとめます。</p>
+<h1 id="7-zip">7-Zip</h1>
+<p>
+  <img src="https://sevenzip.osdn.jp/7ziplogo.png" alt="7-Zip">
+
+</p>
+<p>macOSにはzipファイルにパスワードを設定する機能が標準で搭載されているのですがWindows 10にはありません。
+そのため、別途ソフトウェアをインストールする必要があります。</p>
+<p>Windowsで使えるアーカイバはいくつかありますが、ここでは7-Zipを使用します。
+7-Zipはオープンソースのソフトウェアです。
+基本的にWindows向けですが、zip形式の他にtar形式などにも対応しています。</p>
+<p><a href="https://sevenzip.osdn.jp/">公式サイト</a>よりインストーラをダウンロードできます。</p>
+<h1 id="how-to-use">How to Use</h1>
+<p>まず、圧縮したいファイルを選択します。</p>
+<p>続いて、右クリック &gt; 7-Zip &gt; 圧縮 を選択すると以下のようなウィンドウが表示されます。
+ここでファイル名やパスワードなどを設定します。
+OK を選択するとzipファイルを生成します。
+
+  <img src="../../img/post-20210723-01.png" alt="Compression">
+
+</p>
+<p>これでパスワード付きzipファイルを作成できました。
+実際に作成したzipファイルを開こうとすると、パスワードを要求されることを確認できます。</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/dotlog/post/20210720-static-ip/" data-toggle="tooltip" data-placement="top" title="ラズパイに静的IPアドレスを設定する方法">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/dotlog/post/20210724-cmd2sh/" data-toggle="tooltip" data-placement="top" title="cmd2sh">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/dotlog/tags/github" title="github">
+                            github
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/latex" title="latex">
+                            latex
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/macos" title="macos">
+                            macos
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/raspberry-pi" title="raspberry-pi">
+                            raspberry-pi
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/react" title="react">
+                            react
+                        </a>
+                        
+                        
+                        
+                        <a href="/dotlog/tags/windows" title="windows">
+                            windows
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    <li>
+                        <a href="mailto:kazumakano@outlook.jp">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/kazumakano">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; .LOG 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>

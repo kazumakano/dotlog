@@ -19,7 +19,7 @@ published:   true
 
 そこで今回は、`yarn start`を実行する際にブラウザを開かせないようにします。
 
-# Edit start.js
+# How to Set
 
 プロジェクトの`package.json`を見ると`scripts.start`が`"react-scripts start"`になっています。
 `yarn start`を実行するとreact-scriptsパッケージの`start.js`というスクリプトが呼び出されているようです。

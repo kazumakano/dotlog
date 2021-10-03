@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="GitHubで403エラーが出た時の対処法" />
-    <meta property="og:title" content="GitHubで403エラーが出た時の対処法" />
-    <meta property="twitter:title" content="GitHubで403エラーが出た時の対処法" />
+    <meta name="title" content="アンインストール済みのアプリをアプリと機能の一覧から削除する方法" />
+    <meta property="og:title" content="アンインストール済みのアプリをアプリと機能の一覧から削除する方法" />
+    <meta property="twitter:title" content="アンインストール済みのアプリをアプリと機能の一覧から削除する方法" />
     
 
     
-    <meta name="description" content="キーチェーンアクセスからログイン情報を削除">
-    <meta property="og:description" content="キーチェーンアクセスからログイン情報を削除" />
-    <meta property="twitter:description" content="キーチェーンアクセスからログイン情報を削除" />
+    <meta name="description" content="コントロールパネルから編集">
+    <meta property="og:description" content="コントロールパネルから編集" />
+    <meta property="twitter:description" content="コントロールパネルから編集" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>GitHubで403エラーが出た時の対処法-Blog for Study Information Engineering</title>
+    <title>アンインストール済みのアプリをアプリと機能の一覧から削除する方法-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/post/20210710-github-403-error/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20210909-delete-app/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -163,16 +163,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/dotlog/tags/github" title="github">
-                            github
-                        </a>
-                        
-                        <a class="tag" href="/dotlog/tags/macos" title="macos">
-                            macos
+                        <a class="tag" href="/dotlog/tags/windows" title="windows">
+                            windows
                         </a>
                         
                     </div>
-                    <h1>GitHubで403エラーが出た時の対処法</h1>
+                    <h1>アンインストール済みのアプリをアプリと機能の一覧から削除する方法</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
@@ -180,7 +176,7 @@
                             Kazuma Kano
                          
                         on 
-                        Saturday, July 10, 2021
+                        Thursday, September 9, 2021
                         
                         
                         
@@ -210,36 +206,21 @@
                 </header>
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#git-config">Git Config</a></li>
-    <li><a href="#keychain-access">Keychain Access</a></li>
+    <li><a href="#cause">Cause</a></li>
+    <li><a href="#how-to-delete">How to Delete</a></li>
   </ul>
 </nav>
                 
-                <p>Mac PCでGitHubのリモートリポジトリにプッシュしようとしたところ以下ようなエラーが出ました。
-過去の別のアカウントへのログイン情報を参照してしまっているようです。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">remote: Permission to username/repositoryname.git denied to anotherusername.
-fatal: unable to access <span style="color:#f1fa8c">&#39;https://github.com/username/repositoryname.git/&#39;</span>: The requested URL returned error: <span style="color:#bd93f9">403</span>
-</code></pre></div><h1 id="git-config">Git Config</h1>
-<p>Gitの設定が間違っている可能性があります。</p>
-<p>以下のコマンドを実行すると設定の一覧が表示されます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git config --list
-</code></pre></div><p>誤った<code>user.name</code>と<code>user.email</code>が設定されている場合はそれを修正します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git config --local/global user.name username
-git config --local/global user.email email.com
-</code></pre></div><p>configファイルを直接編集しても良いです。
-ローカルの設定は<code>.git/config</code>、グローバルの設定は<code>~/.gitconfig</code>に記述されています。</p>
-<h1 id="keychain-access">Keychain Access</h1>
-<p>また、MacOSのキーチェーンアクセスに誤ったログイン情報が保存されている可能性もあります。</p>
-<p>Spotlight &gt; keychain access.app でキーチェーンアクセスを開きます。
-ログイン を選択すると、保存されているログイン情報の一覧が表示されます。
-GitHubのログイン情報は以下のようなアイコンが目印です。
-誤ったログイン情報が登録されている場合は、右クリック &gt; &ldquo;github.com&quot;を削除 からそれを削除します。
-
-  <img src="../../img/post-20210710-03.png" alt="Icon">
-
-</p>
-<p>ターミナルからでも編集できるようです。
-詳しくは<a href="https://docs.github.com/ja/github/getting-started-with-github/getting-started-with-git/updating-credentials-from-the-macos-keychain">公式のドキュメント</a>を参照してください。</p>
+                <p>アンインストール済みのアプリがアプリと機能の一覧に表示されたままになってしまった場合、アンインストールを選択してもファイルが見つからずエラーになってしまいます。
+このときの対処法についてまとめます。</p>
+<h1 id="cause">Cause</h1>
+<p>アンインストール済みのアプリが一覧に残ってしまうのは、正常にアンインストールできなかったことが原因と考えられます。</p>
+<p>例えば、アプリをアンインストールする際にアンインストーラを使わずにファイルを直接削除したりすると、PCはアプリがアンインストールされたことを認識できない可能性があります。
+そのためアプリをアンインストールする際は、設定 &gt; アプリ &gt; アプリと機能 &gt; 対象のアプリ &gt; アンインストール からアンインストーラを起動するのが良いです。</p>
+<h1 id="how-to-delete">How to Delete</h1>
+<p>まず、コントロールパネル &gt; プログラム &gt; プログラムのアンインストール &gt; 対象のアプリ &gt; アンインストール を選択します。</p>
+<p>この場合もエラーが発生しますが、その後プログラムと機能の一覧からそのアプリを削除するか問われます。
+ここで はい を選択すれば、そのアプリが設定のアプリと機能の一覧及びコントロールパネルのプログラムと機能の一覧から削除されます。</p>
 
 
                 
@@ -248,15 +229,10 @@ GitHubのログイン情報は以下のようなアイコンが目印です。
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/dotlog/post/readme/" data-toggle="tooltip" data-placement="top" title="README">&larr;
+                        <a href="/dotlog/post/20210815-yarn-start-no-browser/" data-toggle="tooltip" data-placement="top" title="yarn startでブラウザを開かせない方法">&larr;
                             Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/dotlog/post/20210710-github-pages/" data-toggle="tooltip" data-placement="top" title="GitHub Pages">Next
-                            Post &rarr;</a>
-                    </li>
                     
                 </ul>
 

@@ -219,7 +219,7 @@
                 
                 <p>LinuxやUnixに慣れていると、Windowsのコマンドプロンプトでもつい<code>ls</code>とタイプしてしまうことがあります。
 コマンドプロンプトには<code>ls</code>コマンドがないので、以下のようなメッセージが出力されるだけです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">&#39;ls&#39; は、内部コマンドまたは外部コマンド、操作可能なプログラムまたはバッチ ファイルとして認識されていません。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">&#39;ls&#39; は、内部コマンドまたは外部コマンド、操作可能なプログラムまたはバッチ ファイルとして認識されていません。
 </code></pre></div><p><a href="https://docs.microsoft.com/ja-jp/windows/wsl/">WSL</a>や<a href="https://www.cygwin.com/">Cygwin</a>などを使えばLinuxやUnixの環境を構築することは可能です。
 しかしここでは、コマンドプロンプトをそのまま利用して、特に頻繁に使ういくつかのLinuxやUnixのコマンドを再現する方法についてまとめます。</p>
 <h1 id="doskey-command">doskey Command</h1>
@@ -248,7 +248,7 @@ rm       = del $*
 <p><code>ls</code>コマンドについては、そのままの<code>dir</code>コマンドだと使いにくいので、<code>/b</code>オプションを付けることでよりLinuxやUnixの<code>ls</code>コマンドっぽく動作するようにしています。</p>
 <p>続いて、<code>doskey</code>コマンドを実行してエイリアスの設定を反映します。
 <code>/macrofile</code>オプションで先ほど作成したファイルへのパスを指定します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">doskey /macrofile=path¥to¥file
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">doskey /macrofile=path¥to¥file
 </code></pre></div><h1 id="batch-file">Batch File</h1>
 <p><code>doskey</code>コマンドによるエイリアスの設定にはいくつか不便な点があります。
 その内の一つに、<code>doskey</code>コマンドで定義したコマンドはパイプやリダイレクトから入力を受け取れないという点が挙げられます。
@@ -260,14 +260,14 @@ rm       = del $*
 ただし、どこからでも使えるようにするためにはパスを通してやる必要があります。</p>
 <p>まず、バッチファイルを作成します。
 以下は<code>grep.cmd</code>の実装例です。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">@<span style="color:#ff79c6">echo</span> You can use <span style="color:#f1fa8c">&#34;.*&#34;</span> as wild card
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">@<span style="color:#ff79c6">echo</span> You can use <span style="color:#f1fa8c">&#34;.*&#34;</span> as wild card
 @<span style="color:#ff79c6">echo</span>.
 @findstr /n <span style="color:#8be9fd;font-style:italic">%*</span>
 </code></pre></div><p>コマンドプロンプトの<code>findstr</code>コマンドを利用しています。
 ワイルドカードの仕様がややこしいので、<code>echo</code>コマンドでその旨の文章を表示しています。
 命令文の前に<code>@</code>を付けることで、命令文をいちいちコンソールに出力しないようにしています。</p>
 <p>続いて、先ほど作成したバッチファイルが置いてあるディレクトリにパスを通します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">PATH</span>=<span style="color:#8be9fd;font-style:italic">%PATH%</span>path¥to¥dir;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">PATH</span>=<span style="color:#8be9fd;font-style:italic">%PATH%</span>path¥to¥dir;
 </code></pre></div><h1 id="release">Release</h1>
 <p>今回作成したファイルはこちらの<a href="https://github.com/kazumakano/cmd2sh">GitHubリポジトリ</a>に置いてあります。</p>
 <p>リポジトリには以下のファイルが含まれます。

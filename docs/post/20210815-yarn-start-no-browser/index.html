@@ -206,7 +206,7 @@
                 </header>
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#edit-startjs">Edit start.js</a></li>
+    <li><a href="#how-to-set">How to Set</a></li>
   </ul>
 </nav>
                 
@@ -215,13 +215,13 @@
 別の操作スペースだろうと勝手に移動されるので結構鬱陶しいです。</p>
 <p>また、別のブラウザをデフォルトのブラウザとして設定していてもChromeが開かれてしまいます。</p>
 <p>そこで今回は、<code>yarn start</code>を実行する際にブラウザを開かせないようにします。</p>
-<h1 id="edit-startjs">Edit start.js</h1>
+<h1 id="how-to-set">How to Set</h1>
 <p>プロジェクトの<code>package.json</code>を見ると<code>scripts.start</code>が<code>&quot;react-scripts start&quot;</code>になっています。
 <code>yarn start</code>を実行するとreact-scriptsパッケージの<code>start.js</code>というスクリプトが呼び出されているようです。</p>
 <p>そこで、呼び出されているスクリプトを直接編集します。</p>
 <p>まず、エディタで<code>node_modules/react-scripts/scripts/start.js</code>を開きます。</p>
 <p>続いて、以下の文をコメントアウトして保存します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// openBrowser(urls.localUrlForBrowser);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// openBrowser(urls.localUrlForBrowser);
 </span></code></pre></div><p>これで、<code>yarn start</code>でブラウザを開かせないようにすることができました。</p>
 
 
@@ -235,6 +235,11 @@
                             Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/dotlog/post/20210909-delete-app/" data-toggle="tooltip" data-placement="top" title="アンインストール済みのアプリをアプリと機能の一覧から削除する方法">Next
+                            Post &rarr;</a>
+                    </li>
                     
                 </ul>
 

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on .LOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>アンインストール済みのアプリをアプリと機能の一覧から削除する方法</title>
+      <link>https://kazumakano.github.io/dotlog/post/20210909-delete-app/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20210909-delete-app/</guid>
+      <description>アンインストール済みのアプリがアプリと機能の一覧に表示されたままになってしまった場合、アンインストールを選択してもファイルが見つからずエラー</description>
+    </item>
+    
     <item>
       <title>yarn startでブラウザを開かせない方法</title>
       <link>https://kazumakano.github.io/dotlog/post/20210815-yarn-start-no-browser/</link>

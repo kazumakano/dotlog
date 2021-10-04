@@ -3,16 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kazumakano.github.io/dotlog/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kazumakano.github.io/dotlog/tags/android/</loc>
+    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kazumakano.github.io/dotlog/post/20211004-adb-commands/</loc>
+    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/categories/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/post/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/tags/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kazumakano.github.io/dotlog/categories/util/</loc>
+    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/categories/trouble/</loc>
     <lastmod>2021-09-09T00:00:00+00:00</lastmod>
@@ -39,9 +48,6 @@
     <lastmod>2021-08-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/post/20210724-cmd2sh/</loc>
-    <lastmod>2021-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kazumakano.github.io/dotlog/categories/util/</loc>
     <lastmod>2021-07-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/post/20210723-7-zip/</loc>

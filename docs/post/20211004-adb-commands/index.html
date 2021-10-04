@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="LaTexにおける場合分けの環境" />
-    <meta property="og:title" content="LaTexにおける場合分けの環境" />
-    <meta property="twitter:title" content="LaTexにおける場合分けの環境" />
+    <meta name="title" content="Android Debug Bridge" />
+    <meta property="og:title" content="Android Debug Bridge" />
+    <meta property="twitter:title" content="Android Debug Bridge" />
     
 
     
-    <meta name="description" content="displaystyleで表示">
-    <meta property="og:description" content="displaystyleで表示" />
-    <meta property="twitter:description" content="displaystyleで表示" />
+    <meta name="description" content="よく使うコマンドまとめ">
+    <meta property="og:description" content="よく使うコマンドまとめ" />
+    <meta property="twitter:description" content="よく使うコマンドまとめ" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>LaTexにおける場合分けの環境-Blog for Study Information Engineering</title>
+    <title>Android Debug Bridge-Blog for Study Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/post/20210804-latex-cases/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20211004-adb-commands/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -163,12 +163,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/dotlog/tags/latex" title="latex">
-                            latex
+                        <a class="tag" href="/dotlog/tags/android" title="android">
+                            android
                         </a>
                         
                     </div>
-                    <h1>LaTexにおける場合分けの環境</h1>
+                    <h1>Android Debug Bridge</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
@@ -176,7 +176,7 @@
                             Kazuma Kano
                          
                         on 
-                        Wednesday, August 4, 2021
+                        Monday, October 4, 2021
                         
                         
                         
@@ -206,49 +206,40 @@
                 </header>
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#cases">cases</a></li>
-    <li><a href="#dcases">dcases</a></li>
-    <li><a href="#cases-1">cases*</a></li>
+    <li><a href="#android-debug-bridge">Android Debug Bridge</a></li>
+    <li><a href="#developer-options">Developer Options</a></li>
+    <li><a href="#commands">Commands</a></li>
   </ul>
 </nav>
                 
-                <p>LaTexで場合分けを記述するための環境についてまとめます。</p>
-<h1 id="cases">cases</h1>
-<p><code>cases</code>は場合分けを記述するための環境の1つです。
-使用するには<code>amsmath</code>パッケージをインクルードする必要があります。
-デフォルトでは<code>\textstyle</code>になっているため、分数などは窮屈に表示されてしまいます。</p>
-<pre><code>$$
-f(x)=
-\begin{cases}
-    0 &amp; (x &lt; 0) \\
-    \frac{x}{2} &amp; (x \ge 0)
-\end{cases}
-$$
-</code></pre><p>
-  <img src="../../img/post-20210804-01.png" alt="cases">
-
-</p>
-<p><code>\displaystyle</code>を明示的に指定することもできます。</p>
-<pre><code>$$
-f(x)=
-\begin{cases}
-    0 &amp; (x &lt; 0) \\
-    \displaystyle \frac{x}{2} &amp; (x \ge 0)
-\end{cases}
-$$
-</code></pre><p>
-  <img src="../../img/post-20210804-02.png" alt="cases">
-
-</p>
-<h1 id="dcases">dcases</h1>
-<p>一方、<code>dcases</code>環境ではデフォルトで<code>\displaystyle</code>になっています。
-わざわざ<code>cases</code>環境で<code>\displaystyle</code>を指定するよりも、こちらの環境を使った方が楽です。
-使用するには<code>mathtools</code>パッケージをインクルードする必要があります。</p>
-<h1 id="cases-1">cases*</h1>
-<p><code>cases</code>環境では左側の値と右側の条件はどちらも<code>\textstyle</code>でしたが、条件のみデフォルトで<code>\text</code>になった<code>cases*</code>という環境もあります。
-条件に数式ではなく文章を多く記述する場合に有用です。</p>
-<p>同様に、値は<code>\displaystyle</code>で条件が<code>\text</code>である<code>dcases*</code>という環境もあります。
-これらを使用するのに必要となるパッケージはアスタリスク無し環境と同じです。</p>
+                <p>忘れて調べ直すことがあるので、個人的によく使うadbのコマンドをまとめておきます。</p>
+<h1 id="android-debug-bridge">Android Debug Bridge</h1>
+<p>Android Debug Bridge (adb) はAndroidデバイスと通信するためのコマンドラインツールです。</p>
+<p>adbはAndroid SDK Platform-Toolsパッケージに含まれており、<a href="https://developer.android.com/studio?hl=ja">Android Studio</a>のSDK Managerを介してインストールすることができます。
+一応、Android Studioを使わずにSDK Platform-Toolsパッケージ単体でインストールすることも可能なようです。</p>
+<p>詳しくは<a href="https://developer.android.com/studio/command-line/adb?hl=ja">公式のドキュメント</a>を参照してください。</p>
+<h1 id="developer-options">Developer Options</h1>
+<p>adbを使うには、あらかじめAndroidデバイス側で開発者向けオプションを有効にしておく必要があります。
+設定 &gt; デバイス情報 &gt; ビルド番号 を7回タップすることで開発者向けオプションを有効にできます。</p>
+<p>USB経由で通信するには、さらにUSBデバッグを有効にする必要があります。
+設定 &gt; システム &gt; 詳細設定 &gt; 開発者向けオプション &gt; USBデバッグ から変更できます。</p>
+<p>また、USB経由の他にWi-Fi経由で通信することもできるようです。</p>
+<h1 id="commands">Commands</h1>
+<p>私が比較的よく使うコマンドは以下です。</p>
+<ul>
+<li><code>adb devices</code><br>
+接続されているAndroidデバイスの一覧を表示します。
+AndroidデバイスがPCに認識されているかどうかの確認にもなります。</li>
+<li><code>adb shell</code><br>
+Androidデバイス上のUnixシェルにアクセスします。
+<code>exit</code>コマンドで抜けられます。</li>
+<li><code>adb ls dirname</code><br>
+指定したディレクトリ内のファイルの一覧を表示します。</li>
+<li><code>adb pull filepath</code><br>
+指定したファイルをPCにコピーします。</li>
+<li><code>adb bugreport dirname</code><br>
+バグレポートを発行してPC上の指定したディレクトリに保存します。</li>
+</ul>
 
 
                 
@@ -257,15 +248,10 @@ $$
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/dotlog/post/20210724-cmd2sh/" data-toggle="tooltip" data-placement="top" title="cmd2sh">&larr;
+                        <a href="/dotlog/post/20210909-delete-app/" data-toggle="tooltip" data-placement="top" title="アンインストール済みのアプリをアプリと機能の一覧から削除する方法">&larr;
                             Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/dotlog/post/20210815-yarn-start-no-browser/" data-toggle="tooltip" data-placement="top" title="yarn startでブラウザを開かせない方法">Next
-                            Post &rarr;</a>
-                    </li>
                     
                 </ul>
 

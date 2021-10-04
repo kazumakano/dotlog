@@ -6,7 +6,16 @@
     <description>Recent content in util on .LOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/categories/util/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/categories/util/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Debug Bridge</title>
+      <link>https://kazumakano.github.io/dotlog/post/20211004-adb-commands/</link>
+      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20211004-adb-commands/</guid>
+      <description>忘れて調べ直すことがあるので、個人的によく使うadbのコマンドをまとめておきます。 Android Debug Bridge Android Debug Bridge (adb) はAndroidデバイスと通信するためのコマ</description>
+    </item>
+    
     <item>
       <title>cmd2sh</title>
       <link>https://kazumakano.github.io/dotlog/post/20210724-cmd2sh/</link>

@@ -6,7 +6,16 @@
     <description>Recent content in Categories on .LOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>util</title>
+      <link>https://kazumakano.github.io/dotlog/categories/util/</link>
+      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/categories/util/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>trouble</title>
       <link>https://kazumakano.github.io/dotlog/categories/trouble/</link>
@@ -22,15 +31,6 @@
       <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://kazumakano.github.io/dotlog/categories/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>util</title>
-      <link>https://kazumakano.github.io/dotlog/categories/util/</link>
-      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://kazumakano.github.io/dotlog/categories/util/</guid>
       <description></description>
     </item>
     

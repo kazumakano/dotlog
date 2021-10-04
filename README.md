@@ -1,3 +1,3 @@
-# My Blog Pages
+# .LOG
 
-Under construction.
+This is my blog page.

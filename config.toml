@@ -14,10 +14,10 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/home-waiotapu-blue.jpg"
-  SEOTitle = "Blog for Study Information Engineering"
+  SEOTitle = "Blog for Study of Information Engineering"
   description = "当ブログでは、主に情報技術について勉強したことや調べたことなどを気ままにまとめていきます。"
   keyword = "AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web"
-  slogan = "Blog for Study Information Engineering"
+  slogan = "Blog for Study of Information Engineering"
 
   #image_404 = "img/404-bg.jpg"
   #title_404 = "你来到了没有知识的荒原 :("

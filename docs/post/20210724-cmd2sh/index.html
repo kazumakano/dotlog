@@ -34,7 +34,7 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>cmd2sh-Blog for Study Information Engineering</title>
+    <title>cmd2sh-Blog for Study of Information Engineering</title>
 
     <link rel="canonical" href="/dotlog/dotlog/post/20210724-cmd2sh/">
 
@@ -260,11 +260,11 @@ rm       = del $*
 ただし、どこからでも使えるようにするためにはパスを通してやる必要があります。</p>
 <p>まず、バッチファイルを作成します。
 以下は<code>grep.cmd</code>の実装例です。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">@<span style="color:#ff79c6">echo</span> You can use <span style="color:#f1fa8c">&#34;.*&#34;</span> as wild card
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">@<span style="color:#ff79c6">echo</span> You can use <span style="color:#f1fa8c">&#34;.*&#34;</span> as any string
 @<span style="color:#ff79c6">echo</span>.
 @findstr /n <span style="color:#8be9fd;font-style:italic">%*</span>
 </code></pre></div><p>コマンドプロンプトの<code>findstr</code>コマンドを利用しています。
-ワイルドカードの仕様がややこしいので、<code>echo</code>コマンドでその旨の文章を表示しています。
+正規表現を忘れてしまうことがあるので、<code>echo</code>コマンドでヒントを表示しています。
 命令文の前に<code>@</code>を付けることで、命令文をいちいちコンソールに出力しないようにしています。</p>
 <p>続いて、先ほど作成したバッチファイルが置いてあるディレクトリにパスを通します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#ff79c6">set</span> <span style="color:#8be9fd;font-style:italic">PATH</span>=<span style="color:#8be9fd;font-style:italic">%PATH%</span>path¥to¥dir;

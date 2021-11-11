@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kazumakano.github.io/dotlog/</loc>
-    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kazumakano.github.io/dotlog/post/</loc>
+    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kazumakano.github.io/dotlog/post/20211022-powershell-no-logo/</loc>
+    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kazumakano.github.io/dotlog/tags/</loc>
+    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kazumakano.github.io/dotlog/tags/windows/</loc>
+    <lastmod>2021-10-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/tags/android/</loc>
     <lastmod>2021-10-04T00:00:00+00:00</lastmod>
@@ -14,19 +26,10 @@
     <loc>https://kazumakano.github.io/dotlog/categories/</loc>
     <lastmod>2021-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kazumakano.github.io/dotlog/post/</loc>
-    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kazumakano.github.io/dotlog/tags/</loc>
-    <lastmod>2021-10-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kazumakano.github.io/dotlog/categories/util/</loc>
     <lastmod>2021-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/categories/trouble/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kazumakano.github.io/dotlog/tags/windows/</loc>
     <lastmod>2021-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kazumakano.github.io/dotlog/post/20210909-delete-app/</loc>

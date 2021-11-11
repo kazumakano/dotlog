@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="Android Debug Bridge" />
-    <meta property="og:title" content="Android Debug Bridge" />
-    <meta property="twitter:title" content="Android Debug Bridge" />
+    <meta name="title" content="PowerShellの起動時にメッセージを表示させない方法" />
+    <meta property="og:title" content="PowerShellの起動時にメッセージを表示させない方法" />
+    <meta property="twitter:title" content="PowerShellの起動時にメッセージを表示させない方法" />
     
 
     
-    <meta name="description" content="よく使うコマンドまとめ">
-    <meta property="og:description" content="よく使うコマンドまとめ" />
-    <meta property="twitter:description" content="よく使うコマンドまとめ" />
+    <meta name="description" content="NoLogoパラメータを指定">
+    <meta property="og:description" content="NoLogoパラメータを指定" />
+    <meta property="twitter:description" content="NoLogoパラメータを指定" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="AI, Autonomous Vehicle, Blog, Computer, Deep Learning, Engineering, Golang, HTML, Internet, IT, Linux, Machine Learning, Programming, Python, Robot, Software, VR, Web">
     <link rel="shortcut icon" href="/dotlog/img/favicon.ico">
 
-    <title>Android Debug Bridge-Blog for Study of Information Engineering</title>
+    <title>PowerShellの起動時にメッセージを表示させない方法-Blog for Study of Information Engineering</title>
 
-    <link rel="canonical" href="/dotlog/dotlog/post/20211004-adb-commands/">
+    <link rel="canonical" href="/dotlog/dotlog/post/20211022-powershell-no-logo/">
 
     <link rel="stylesheet" href="/dotlog/css/iDisqus.min.css"/>
 
@@ -163,12 +163,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/dotlog/tags/android" title="android">
-                            android
+                        <a class="tag" href="/dotlog/tags/windows" title="windows">
+                            windows
                         </a>
                         
                     </div>
-                    <h1>Android Debug Bridge</h1>
+                    <h1>PowerShellの起動時にメッセージを表示させない方法</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by 
@@ -176,7 +176,7 @@
                             Kazuma Kano
                          
                         on 
-                        Monday, October 4, 2021
+                        Friday, October 22, 2021
                         
                         
                         
@@ -206,40 +206,33 @@
                 </header>
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#android-debug-bridge">Android Debug Bridge</a></li>
-    <li><a href="#developer-options">Developer Options</a></li>
-    <li><a href="#commands">Commands</a></li>
+    <li><a href="#parameter">Parameter</a></li>
+    <li><a href="#how-to-set">How to Set</a></li>
   </ul>
 </nav>
                 
-                <p>忘れて調べ直すことがあるので、個人的によく使うadbのコマンドをまとめておきます。</p>
-<h1 id="android-debug-bridge">Android Debug Bridge</h1>
-<p>Android Debug Bridge (adb) はAndroidデバイスと通信するためのコマンドラインツールです。</p>
-<p>adbはAndroid SDK Platform-Toolsパッケージに含まれており、<a href="https://developer.android.com/studio?hl=ja">Android Studio</a>のSDK Managerを介してインストールすることができます。
-一応、Android Studioを使わずにSDK Platform-Toolsパッケージ単体でインストールすることも可能なようです。</p>
-<p>詳しくは<a href="https://developer.android.com/studio/command-line/adb?hl=ja">公式のドキュメント</a>を参照してください。</p>
-<h1 id="developer-options">Developer Options</h1>
-<p>adbを使うには、あらかじめAndroidデバイス側で開発者向けオプションを有効にしておく必要があります。
-設定 &gt; デバイス情報 &gt; ビルド番号 を7回タップすることで開発者向けオプションを有効にできます。</p>
-<p>USB経由で通信するには、さらにUSBデバッグを有効にする必要があります。
-設定 &gt; システム &gt; 詳細設定 &gt; 開発者向けオプション &gt; USBデバッグ から変更できます。</p>
-<p>また、USB経由の他にWi-Fi経由で通信することもできるようです。</p>
-<h1 id="commands">Commands</h1>
-<p>私が比較的よく使うコマンドは以下です。</p>
-<ul>
-<li><code>adb devices</code><br>
-接続されているAndroidデバイスの一覧を表示します。
-AndroidデバイスがPCに認識されているかどうかの確認にもなります。</li>
-<li><code>adb shell</code><br>
-Androidデバイス上のUnixシェルにアクセスします。
-<code>exit</code>コマンドで抜けられます。</li>
-<li><code>adb ls dirname</code><br>
-指定したディレクトリ内のファイルの一覧を表示します。</li>
-<li><code>adb pull filepath</code><br>
-指定したファイルをPCにコピーします。</li>
-<li><code>adb bugreport dirname</code><br>
-バグレポートを発行してPC上の指定したディレクトリに保存します。</li>
-</ul>
+                <p>最近ようやくPowerShellをバージョン7にアップデートしたのですが、デフォルトでは起動時に以下のようなコピーライトとヘルプのメッセージが表示されます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">PowerShell 7.1.5
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/powershell
+<span style="color:#ff79c6">Type</span> &#39;help&#39; to get help.
+</code></pre></div><p>毎回表示されると結構気になります。今回はこのメッセージを表示させない方法について調べたのでまとめます。</p>
+<h1 id="parameter">Parameter</h1>
+<p>PowerShellには起動時に指定できるパラメータがいくつか用意されています。
+<code>-NoLogo</code>パラメータはそのうちの1つです。
+このパラメータを指定するとコピーライトやヘルプのメッセージを省略できます。</p>
+<p>パラメータは以下のようにpowershellの起動コマンドの後ろに付けることで指定できます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">powershell -Parameter
+</code></pre></div><p>その他のパラメータについてはこちらの<a href="https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_powershell_exe?view=powershell-5.1">ドキュメント</a>を参照してください。</p>
+<h1 id="how-to-set">How to Set</h1>
+<p>私は普段Windows Terminal上でPowerShellを使っています。
+この場合、Windows TerminalからPowerShellを呼び出すコマンドにパラメータを設定してやる必要があります。
+具体的には、Windows Terminal &gt; 設定 &gt; PowerShell &gt; 全般 &gt; コマンドライン の欄にあるコマンドに<code>-NoLogo</code>を付け足すことで設定できます。
+これでWindows Terminal上でPowerShellを起動したときにメッセージが表示されないようになりました。</p>
+<p>上記の設定はWindows Terminalに対するものなので、ショートカットアイコンから直接起動した際にはメッセージは表示されたままです。
+これを表示させないようにするにはショートカットからPowerShellを呼び出すコマンドにパラメータを設定してやる必要があります。
+具体的には、スタート &gt; PowerShell &gt; ファイルの場所を開く &gt; Powershell &gt; プロパティ &gt; リンク先 の欄にあるコマンドに<code>-NoLogo</code>を付け足すことで設定できます。</p>
 
 
                 
@@ -248,15 +241,10 @@ Androidデバイス上のUnixシェルにアクセスします。
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/dotlog/post/20210909-delete-app/" data-toggle="tooltip" data-placement="top" title="アンインストール済みのアプリをアプリと機能の一覧から削除する方法">&larr;
+                        <a href="/dotlog/post/20211004-adb-commands/" data-toggle="tooltip" data-placement="top" title="Android Debug Bridge">&larr;
                             Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/dotlog/post/20211022-powershell-no-logo/" data-toggle="tooltip" data-placement="top" title="PowerShellの起動時にメッセージを表示させない方法">Next
-                            Post &rarr;</a>
-                    </li>
                     
                 </ul>
 

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on .LOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 04 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kazumakano.github.io/dotlog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShellの起動時にメッセージを表示させない方法</title>
+      <link>https://kazumakano.github.io/dotlog/post/20211022-powershell-no-logo/</link>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://kazumakano.github.io/dotlog/post/20211022-powershell-no-logo/</guid>
+      <description>最近ようやくPowerShellをバージョン7にアップデートしたのですが、デフォルトでは起動時に以下のようなコピーライトとヘルプのメッセージ</description>
+    </item>
+    
     <item>
       <title>Android Debug Bridge</title>
       <link>https://kazumakano.github.io/dotlog/post/20211004-adb-commands/</link>
